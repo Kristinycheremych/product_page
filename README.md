@@ -4,7 +4,7 @@
 
 ## Установка
 
-1. **Клонируйте репозиторий:** git clone https://gitverse.ru/Eremenko/product_page.git
+1. **Клонируйте репозиторий:** git clone https://github.com/Kristinycheremych/product_page.git
 
 2. **Перейдите в папку:** cd product_page
 
