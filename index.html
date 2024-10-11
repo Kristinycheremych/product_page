@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовое задание</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <!-- Подключение иконок Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="burger-menu">
+        <i class="bi bi-list"></i>
+      </div>
+
+      <img src="public/images/logo.png" alt="logo" />
+      <div class="align-items-center link">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item me-4 text-center">
+            <i class="bi bi-telephone mb-1"></i>
+            <span>Контакты</span>
+          </li>
+          <li class="list-inline-item me-4 text-center">
+            <i class="bi bi-book mb-1"></i>
+            <span>Блог</span>
+          </li>
+          <li class="list-inline-item text-center">
+            <i class="bi bi-person mb-1"></i>
+            <span>Заказы</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="orders">
+        <i class="bi bi-person"></i>
+      </div>
+    </header>
+
+    <!--  Хлебные крошки -->
+    <div class="bread-crumbs">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+          <li class="breadcrumb-item">
+            <a href="#">Главная</a>
+          </li>
+          <li class="separator">➔</li>
+          <li class="breadcrumb-item active" aria-current="page">Каталог</li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- Карточка Стрелы Амура -->
+    <div class="container content-card">
+      <div class="container-cotent">
+        <div
+          class="custom-card d-flex flex-column flex-md-row position-relative"
+        >
+          <!-- Левая часть с текстом -->
+          <div class="content-section p-4">
+            <h3 class="card-title"><strong>Стрелы Амура, 18+</strong></h3>
+
+            <ul class="list-inline mb-3">
+              <li class="list-inline-item badge">квест</li>
+              <li class="list-inline-item badge">для 2 человек</li>
+              <li class="list-inline-item badge">для дома</li>
+              <li class="list-inline-item badge">сложность 7/10</li>
+            </ul>
+
+            <p class="card-text">
+              Романтический квест по поиску подарка для второй половинки: мужа,
+              жены, парня или девушки. Чтобы собрать 7 стрел бога любви Амура и
+              разыскать подарок, игроку нужно выполнить задания древних богов.
+            </p>
+          </div>
+
+          <!-- Правая часть с изображением -->
+          <div class="image-section">
+            <img src="public/images/cupid.png" alt="Амур" class="img-fluid" />
+          </div>
+
+          <!-- Элемент для градиента -->
+          <div class="gradient-overlay"></div>
+
+          <!-- Метка "Самый популярный" -->
+          <span class="popular-badge">cамый популярный</span>
+        </div>
+      </div>
+
+      <!-- Карточка оплаты -->
+
+      <div class="row payment-section">
+        <div class="payment-info">
+          <p>Принимаем к оплате</p>
+          <div class="payment-methods">
+            <img src="public/images/sber-icon.jpg" alt="Payment methods" />
+            <img
+              src="public/images/mastercard-icon.jpg"
+              alt="Payment methods"
+            />
+            <img src="public/images/visa-icon.png" alt="Payment methods" />
+            <img src="public/images/mir-icon.png" alt="Payment methods" />
+          </div>
+          <p>Я из другой страны — <a href="#">как оплатить?</a></p>
+          <div class="">
+            <button class="btn btn-primary">Купить квест 500 ₽</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Отзывы клиентов -->
+    <div class="card-customer-reviews">
+      <h4 class="reviews-header">
+        <strong>Отзывы клиентов</strong><sup>182</sup>
+      </h4>
+      <p class="sup-mob">1/182</p>
+      <div class="d-flex reviews-container">
+        <div class="content-review">
+          <div class="review">
+            <p><small>14 февраля 2024</small></p>
+            <div class="text-reviews">
+              <h5>Константин (12 игроков 36-50 лет)</h5>
+            </div>
+            <div class="star-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <h6>День Святого Валентина</h6>
+            <p>
+              Понравилось, что вопросы хоть и объединены одной темой, были не
+              похожи друг на друга. Разные страны и эпохи – есть где разгуляться
+              фантазии.
+            </p>
+          </div>
+        </div>
+        <div class="content-review">
+          <div class="review">
+            <p><small>14 февраля 2024</small></p>
+            <div class="text-reviews">
+              <h5>Светлана (2 игрока 36 лет)</h5>
+            </div>
+            <div class="star-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <h6>День Рождения</h6>
+            <p>
+              Понравилось, что вопросы хоть и объединены одной темой, были не
+              похожи друг на друга. Разные страны и эпохи – есть где разгуляться
+              фантазии.
+            </p>
+          </div>
+        </div>
+        <div class="content-review">
+          <div class="review">
+            <p><small>14 февраля 2024</small></p>
+            <div class="text-reviews">
+              <h5>Светлана (2 игрока 36 лет)</h5>
+            </div>
+            <div class="star-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <h6>День Рождения</h6>
+            <p>
+              Понравилось, что вопросы хоть и объединены одной темой, были не
+              похожи друг на друга. Разные страны и эпохи – есть где разгуляться
+              фантазии.
+            </p>
+          </div>
+        </div>
+        <div class="content-review">
+          <div class="review">
+            <p><small>14 февраля 2024</small></p>
+            <div class="text-reviews">
+              <h5>Светлана (2 игрока 36 лет)</h5>
+            </div>
+            <div class="star-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <h6>День Рождения</h6>
+            <p>
+              Понравилось, что вопросы хоть и объединены одной темой, были не
+              похожи друг на друга. Разные страны и эпохи – есть где разгуляться
+              фантазии.
+            </p>
+          </div>
+        </div>
+        <div class="content-review">
+          <div class="review">
+            <p><small>14 февраля 2024</small></p>
+            <div class="text-reviews">
+              <h5>Светлана (2 игрока 36 лет)</h5>
+            </div>
+            <div class="star-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <h6>День Рождения</h6>
+            <p>
+              Понравилось, что вопросы хоть и объединены одной темой, были не
+              похожи друг на друга. Разные страны и эпохи – есть где разгуляться
+              фантазии.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="button-review-container">
+        <button class="button-review btn btn-primary">
+          Смотреть все отзывы
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

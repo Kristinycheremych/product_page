@@ -1,0 +1,428 @@
+$primary-color: #f96a00;
+$background-color: #fff;
+$text-color: #424242;
+$sub-text-color: #666;
+$badge-text-color: black;
+$shadow-color: #0000001a;
+$scrollbar-color: #f1f1f1;
+$popular-color: #ffffff8f;
+
+body {
+  background-color: $background-color;
+  margin: 0;
+  padding: 0;
+}
+
+// Стили для header
+header {
+  background-color: $background-color;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 120px;
+
+  .burger-menu,
+  .orders {
+    display: none;
+  }
+
+  @media (max-width: 670px) {
+    padding: 5px 20px;
+
+    .burger-menu,
+    .orders {
+      display: flex;
+      font-size: 30px;
+    }
+    .link {
+      display: none;
+    }
+  }
+}
+
+.list-inline {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  flex-wrap: wrap;
+}
+
+.list-inline-item {
+  display: flex;
+  flex-direction: column;
+  color: $text-color;
+  margin-right: 8px;
+  margin-top: 8px;
+
+  i {
+    font-size: 20px;
+    margin-bottom: 0.5rem;
+  }
+
+  &:hover span {
+    color: $primary-color;
+  }
+}
+
+// Хлебные крошки
+
+.bread-crumbs {
+  padding: 24px 120px;
+
+  .breadcrumb {
+    padding: 0;
+    list-style: none;
+  }
+
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: $text-color;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  .separator {
+    margin: 0 8px;
+    color: $text-color;
+  }
+
+  .breadcrumb-item.active {
+    color: $sub-text-color;
+  }
+  @media (max-width: 1402px) {
+    display: none;
+  }
+}
+
+// Карточка Стрелы Амура
+
+.content-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+
+  .custom-card {
+    width: 900px;
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    .content-section {
+      max-width: 400px;
+      h3 {
+        font-weight: bold;
+        color: $text-color;
+        font-size: 32px;
+        padding-bottom: 20px;
+      }
+
+      p {
+        color: $sub-text-color;
+      }
+
+      .badge {
+        background-color: #1c1c1c0d;
+        font-size: 17px;
+        font-weight: 500;
+      }
+    }
+
+    .image-section {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .gradient-overlay {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 40%;
+      background: linear-gradient(
+        to right,
+        rgb(255, 255, 255) 8%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      background-color: $popular-color;
+      color: $sub-text-color;
+      font-size: 15px;
+      border-radius: 5px;
+      padding: 0 5px;
+    }
+  }
+
+  .payment-section {
+    margin-left: 70px;
+
+    .payment-info {
+      background-color: $background-color;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 6px $shadow-color;
+      text-align: center;
+      width: 300px;
+      height: 250px;
+
+      p {
+        color: $sub-text-color;
+      }
+
+      .payment-methods {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        img {
+          max-width: 50px;
+          height: auto;
+        }
+      }
+
+      a {
+        text-decoration: underline;
+        color: $primary-color;
+        margin-bottom: 15px;
+        display: block;
+
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+      }
+
+      button {
+        background-color: $primary-color;
+        border: none;
+        padding: 10px 20px;
+        color: $background-color;
+        border-radius: 5px;
+        font-size: 15px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: darken($primary-color, 10%);
+        }
+      }
+    }
+  }
+
+  /* Адаптивность для мобильных устройств */
+  @media (max-width: 1402px) {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+
+    .image-section {
+      width: 100%;
+    }
+
+    .custom-card {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+      border-radius: 0;
+      text-align: center;
+
+      .list-inline {
+        justify-content: center;
+      }
+
+      .image-section {
+        order: -1;
+      }
+
+      .content-section,
+      .image-section {
+        h3 {
+          font-size: 25px;
+        }
+      }
+
+      .gradient-overlay {
+        display: none;
+      }
+
+      .popular-badge {
+        position: absolute;
+        left: 20px;
+        width: 150px;
+      }
+    }
+    .payment-section {
+      margin-left: 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      .payment-info {
+        padding: 15px;
+        padding: 10px;
+        width: 100%;
+        height: max-content;
+        .payment-methods,
+        a,
+        p {
+          display: none;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Отзывы клиентов
+
+.card-customer-reviews {
+  padding: 24px 120px;
+  border: none;
+  width: 1130px;
+  background-color: $background-color;
+
+  .sup-mob {
+    display: none;
+  }
+  .reviews-header {
+    font-weight: bold;
+    color: $text-color;
+    font-size: 32px;
+    padding-bottom: 20px;
+  }
+
+  h5 {
+    font-size: 15px;
+  }
+
+  .text-reviews {
+    height: 40px;
+  }
+
+  h6 {
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 15px;
+    color: $sub-text-color;
+  }
+
+  .star-rating {
+    margin-bottom: 10px;
+
+    .star {
+      color: $primary-color;
+      font-size: 20px;
+    }
+  }
+
+  .reviews-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
+  /* Стиль для ползунка скроллбара */
+  .reviews-container::-webkit-scrollbar {
+    height: 12px;
+  }
+
+  /* Стиль для трека скроллбара (фон) */
+  .reviews-container::-webkit-scrollbar-track {
+    background-color: $scrollbar-color;
+    border-radius: 6px;
+  }
+
+  /* Стиль для ползунка */
+  .reviews-container::-webkit-scrollbar-thumb {
+    background-color: $sub-text-color;
+    border-radius: 6px;
+  }
+
+  /* Стиль при наведении на ползунок */
+  .reviews-container::-webkit-scrollbar-thumb:hover {
+    background-color: $text-color;
+  }
+
+  .review {
+    display: inline-block;
+    width: 270px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: 350px;
+  }
+
+  .content-review {
+    padding: 20px 20px 20px 8px;
+  }
+
+  .reviews-header {
+    font-size: 30px;
+  }
+
+  .button-review-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .button-review {
+    background-color: $primary-color;
+    border-color: $primary-color;
+    width: 400px;
+    color: $background-color;
+    height: 50px;
+
+    &:hover {
+      background-color: $primary-color;
+      border-color: $primary-color;
+    }
+  }
+
+  /* Адаптация под мобильные устройства */
+  @media (max-width: 960px) {
+    padding: 20px;
+    width: 100%;
+
+    sup {
+      display: none;
+    }
+
+    .sup-mob {
+      display: block;
+      margin: 0;
+    }
+
+    .reviews-header {
+      font-size: 25px;
+      padding-bottom: 0;
+      margin: 0;
+    }
+
+    .button-review-container {
+      margin-top: 0;
+      padding-bottom: 50px;
+    }
+
+    .button-review {
+      width: 100%;
+      height: 45px;
+    }
+  }
+}
